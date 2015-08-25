@@ -1,0 +1,11 @@
+{
+  "name": "rousey",
+  "version": "1.0.0",
+  "dependencies": {
+    "less": "~1.7.0",
+    "universal-jst": "~1.0.5"
+  },
+  "devDependencies": {
+    "less": "^1.7.5"
+  }
+}

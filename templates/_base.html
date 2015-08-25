@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+
+    <title>{{ COPY.attribution.title }}</title>
+
+    <!-- META TAGS -->
+    {% include '_meta.html' %}
+
+    <!-- CSS -->
+    {{ CSS.push('less/app.less') }}
+    {% block extra_css %}{% endblock extra_css %}
+    {{ CSS.render('css/app.min.css') }}
+
+    {% include '_social_tags.html' %}
+
+    {% block extra_head %}
+    {% endblock extra_head %}
+
+    <!-- JS -->
+    {{ JS.push('js/lib/modernizr.js') }}
+    {{ JS.render('js/app-header.min.js') }}
+    {{ JS.push('js/lib/jquery.js') }}  
+</head>
+<body>
+    <!-- ANALYTICS JAVASCRIPT -->
+    {{ JS.push('js/app_config.js') }}
+    
+    <a class="sr-only" href="#content">Skip To Content</a>
+
+    {% block outer_content %}
+    {% block header_content %}
+    {% endblock header_content %}  
+
+    <section id="content">
+                    {% block content %}
+                    <h1>{{ title }}</h1>
+                    
+
+                    <i class="icon icon-play"></i>
+                    {% endblock content %}
+                </div>
+            </div>
+            {% block wide_content %}
+            {% endblock wide_content %}
+        </div>
+    </section>
+
+    <footer>
+        
+    </footer>
+
+    {% endblock outer_content %}
+
+    {{ JS.push('js/lib/jquery.js') }}
+    {{ JS.push('js/lib/underscore.js') }}
+    {{ JS.push('js/lib/bootstrap.js') }}
+    {{ JS.push('js/lib/moment.js') }}
+    {{ JS.push('js/lib/jquery.fullPage.js') }}
+    {{ JS.push('js/lib/jquery.jplayer.min.js') }}
+    {{ JS.push('js/lib/humanize.js') }}
+    {{ JS.push('js/app_config.js') }}
+    {{ JS.push('js/copy.js') }}
+    {{ JS.push('js/console.js') }}
+    {{ JS.push('js/templates.js') }}
+    {{ JS.push('js/app.js') }}
+    {% block extra_foot_js %}{% endblock extra_foot_js %}
+    {{ JS.render('js/app-footer.min.js') }}
+
+    {% block extra_foot %}
+    {% endblock extra_foot %}
+</body>
+</html>
