@@ -596,6 +596,8 @@ $(window).load(function() {
     var imgPATH = 'img/'+urlArray[1]+'.png';
     var urlPATH = 'http://www.'+urlArray[1]+'.com';
     var urlTEXT = urlArray[1]+'.com';
+    var projectsPATH = 'http://projects.'+urlArray[1]+'.com';
     $("#home-link").attr("href", urlPATH);
     $("#home-link-text").text(urlTEXT);
+    $("#home-link-projects").attr("href", projectsPATH);
 });
