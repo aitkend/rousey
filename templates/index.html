@@ -4,7 +4,9 @@
 
 {% endblock %}
 
-{% block content %}
+{% block content %}  
+
+
 
 {% for row in COPY.content %}
     {% include "%s.html"|format(row.template) ignore missing %}
